@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflectie</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 10px 20px;
+        }
+        .logo {
+            color: #FFC107;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+        h1.glitch {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ff0;
+            text-shadow: 3px 3px 0 red, -3px -3px 0 cyan;
+            animation: glitch 0.8s infinite alternate;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 3px 3px 0 red, -3px -3px 0 cyan; }
+            100% { text-shadow: -3px -3px 0 red, 3px 3px 0 cyan; }
+        }
+        main {
+            max-width: 800px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">CKV</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="opdrachten.html">Opdrachten</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="evenementen.html">Evenementen</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1 class="glitch" data-text="CONTACT">CONTACT</h1>
+        <p>Wil je contact opnemen? Stuur me een bericht via Instagram of e-mail!</p>
+        
+        <div class="contact-links">
+            <a href="https://www.instagram.com/yannick_dijks_" target="_blank">
+                <img src="instagram-logo.png" alt="Instagram">
+                <p>@yannick_dijks_</p>
+            </a>
+            <a href="mailto:604675@csg-comenius.nl">
+                <img src="email-icon.png" alt="E-mail">
+                <p>604675@csg-comenius.nl</p>
+            </a>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over CKV - CKV</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00; }
+            50% { text-shadow: -2px -2px 0 #ff0000, 2px 2px 0 #00ff00; }
+            100% { text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00; }
+        }
+
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            animation: glitch 0.8s infinite alternate;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .image-gallery div {
+            width: 30%;
+            min-width: 250px;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .music-text {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .spotify-wrapped {
+            width: 32%;
+            min-width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">CKV</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="opdrachten.html">Opdrachten</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="evenementen.html">Evenementen</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="assignment-page">
+        <h1>Wat is CKV</h1>
+        
+        <p class="music-text">
+            **CKV (Culturele en Kunstzinnige Vorming)** is een vak waarin je kennismaakt met kunst en cultuur. Je leert over dingen zoals muziek, theater, schilderijen en dans. Ook bezoek je soms musea of voorstellingen. Het belangrijkste is dat je ontdekt wat jij mooi of interessant vindt en waarom. Je maakt opdrachten en denkt na over wat je hebt gezien en gedaan. CKV helpt je op een leuke manier creatief te zijn en nieuwe dingen te ontdekken! 
+        </p>
+        
+        <div class="image-gallery">
+            <div>
+                <img src="Cultuur1.jpeg" alt="Nederlandse Cultuur">
+                <p>De C in CKV van Cultuur deze foto laat de nederlandse cultuur zien zoals windmolens tulpen</p>
+            </div>
+            <div>
+                <img src="kunst1.jpeg" alt="Mona Lisa">
+                <p>De K in CKV van kunst de Mona Lisa is een van de bekenste kunstwerken ooit.</p>
+            </div>
+            <div>
+                <img src="vorming1.jpeg" alt="Yeat concert 013 Poppodium">
+                <p>De V in CKV van Vorming de Oldehove is een bekende toren in leeuwarden</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

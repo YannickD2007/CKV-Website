@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dans - CKV</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00; }
+            50% { text-shadow: -2px -2px 0 #ff0000, 2px 2px 0 #00ff00; }
+            100% { text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00; }
+        }
+
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            animation: glitch 0.8s infinite alternate;
+        }
+
+        .dance-text {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Foto's dichter bij elkaar */
+            margin-top: 20px;
+        }
+
+        .image-gallery img {
+            width: 45%; /* Foto's iets breder */
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">CKV</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="opdrachten.html">Opdrachten</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="evenementen.html">Evenementen</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="assignment-page">
+        <h1>Dans</h1>
+        
+        <p class="dance-text">
+            Ik heb niet veel met dans, maar in groep 7 en 8 op de basisschool deed ik mee aan de <b>Sakoveld Bokaal</b>. 
+            In groep 7 behaalden we de <b>3e plek</b> in de hoofdklasse. In groep 8 haalde ik de finale, maar door corona ging deze helaas niet door. 
+            Verder heb ik niks met dans, maar het was toen wel een leuke ervaring!
+        </p>
+        
+        <div class="image-gallery">
+            <div>
+                <img src="sakoveld_podium.jpg" alt="Op het podium bij de Sakoveld Bokaal">
+                <p>Op het podium na het behalen van de 3e plek!</p>
+            </div>
+            <div>
+                <img src="sakoveld_hoor_moment.jpg" alt="Het moment dat we hoorden dat we 3e waren">
+                <p>Het moment dat we hoorden dat we 3e waren.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

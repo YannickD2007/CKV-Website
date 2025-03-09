@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architectuur - CKV</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00; }
+            50% { text-shadow: -2px -2px 0 #ff0000, 2px 2px 0 #00ff00; }
+            100% { text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00; }
+        }
+
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            animation: glitch 0.8s infinite alternate;
+        }
+
+        .architecture-text {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .image-gallery img {
+            width: 40%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">CKV</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="opdrachten.html">Opdrachten</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="evenementen.html">Evenementen</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="assignment-page">
+        <h1>Architectuur</h1>
+        
+        <p class="architecture-text">
+            Een gebouw dat ik echt mooi vond is de <strong>Big Ben</strong> in Londen. De toren ziet er super gaaf uit, vooral 's avonds als hij verlicht is. Ik vind het bijzonder hoe oud het is en hoe het symbool staat voor de stad.
+            <br><br>
+            Londen zelf is ook een indrukwekkende stad. Overal zie je mooie, oude gebouwen zoals de <strong>stad zelf</strong> en het <strong>Buckingham Palace</strong>. De mix van klassieke en moderne architectuur maakt de stad speciaal.
+        </p>
+
+        <div class="image-gallery">
+            <div>
+                <img src="big_ben.jpg" alt="Big Ben in Londen">
+                <p>De Big Ben, een van de bekendste gebouwen ter wereld.</p>
+            </div>
+            <div>
+                <img src="tower_bridge.jpg" alt="Tower Bridge in Londen">
+                <p>Een foto die ik heb gemaak vanuit het hotel in londen aan de oost kant</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

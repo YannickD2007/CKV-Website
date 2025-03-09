@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muziek - CKV</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00; }
+            50% { text-shadow: -2px -2px 0 #ff0000, 2px 2px 0 #00ff00; }
+            100% { text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00; }
+        }
+
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            animation: glitch 0.8s infinite alternate;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .image-gallery div {
+            width: 30%;
+            min-width: 250px;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .music-text {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .spotify-wrapped {
+            width: 32%;
+            min-width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">CKV</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="opdrachten.html">Opdrachten</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="evenementen.html">Evenementen</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="assignment-page">
+        <h1>Muziek</h1>
+        
+        <p class="music-text">
+            Muziek speelt een grote rol in mijn leven. Vorig jaar heb ik meer dan <strong>57.000 minuten</strong> naar muziek geluisterd op Spotify. Dit laat zien hoe belangrijk muziek voor mij is. 
+            Ik luister naar allerlei genres, van hiphop tot elektronische muziek, en ontdek graag nieuwe artiesten en stijlen. 
+            Naast luisteren maak ik ook zelf muziek. Ik experimenteer met beats en probeer unieke sounds te creëren. 
+            Het proces van muziek maken geeft me veel energie en inspiratie.
+        </p>
+        
+        <div class="image-gallery">
+            <div>
+                <img src="travis.jpeg" alt="Travis Scott concert Gelredome">
+                <p>Travis Scott live tijdens zijn indrukwekkende show, een ervaring vol energie.</p>
+            </div>
+            <div>
+                <img class="spotify-wrapped" src="spotify wrapped.jpg" alt="Spotify Wrapped 2023">
+                <p>Mijn Spotify Wrapped: mijn favoriete artiesten en tracks van het jaar.</p>
+            </div>
+            <div>
+                <img src="yeat.jpeg" alt="Yeat concert 013 Poppodium">
+                <p>Yeat in 013, een unieke sfeer met harde beats en een gepassioneerd publiek.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

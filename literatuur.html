@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literatuur - CKV</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00; }
+            50% { text-shadow: -2px -2px 0 #ff0000, 2px 2px 0 #00ff00; }
+            100% { text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00; }
+        }
+
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            animation: glitch 0.8s infinite alternate;
+        }
+
+        .literature-text {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .book-image {
+            margin-top: 20px;
+        }
+
+        .book-image img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .book-image img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">CKV</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="opdrachten.html">Opdrachten</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="evenementen.html">Evenementen</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="assignment-page">
+        <h1>Literatuur</h1>
+        
+        <p class="literature-text">
+            Het boek dat ik me nog goed herinner van vroeger is <strong>Vliegensvlugge Vlieg</strong>. Dit boek werd me vaak voorgelezen, en ik vond het altijd leuk omdat het over een snelle vlieg gaat die overal langs scheert.  
+            <br><br>
+            Het verhaal is simpel, maar ik vond het cool hoe de vlieg overal naartoe ging. Soms kan dit boek je laten nadenken over hoe snel dingen kunnen veranderen en dat het soms goed is om even rustig aan te doen.
+        </p>
+
+        <div class="book-image">
+            <img src="vliegensvlugge_vlieg.jpg" alt="Vliegensvlugge Vlieg boek">
+        </div>
+    </section>
+</body>
+</html>

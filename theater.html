@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theater - CKV</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00; }
+            50% { text-shadow: -2px -2px 0 #ff0000, 2px 2px 0 #00ff00; }
+            100% { text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00; }
+        }
+
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            animation: glitch 0.8s infinite alternate;
+        }
+
+        .theater-text {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            width: 40%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">CKV</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="opdrachten.html">Opdrachten</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="evenementen.html">Evenementen</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="assignment-page">
+        <h1>Theaterervaring</h1>
+        
+        <p class="theater-text">
+            In 2024 ben ik naar een voorstelling geweest van <strong>Van der Laan & Woe</strong> in theater <strong>De Harmonie</strong> in Leeuwarden. 
+            Het was een leuke avond. Ze maakten veel grappen en deden grappige sketches.  
+            De zaal was groot en iedereen lachte veel. Ik vond het leuk om dit een keer in het echt te zien.  
+        </p>
+        
+        <div class="image-container">
+            <div>
+                <img src="vdlan.jpg" alt="Van der Laan & Woe voorstelling">
+                <p>Een moment uit de show van Van der Laan & Woe.</p>
+            </div>
+            <div>
+                <img src="harmonie-leeuwarden.jpg" alt="De Harmonie Leeuwarden">
+                <p>Theater De Harmonie in Leeuwarden.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

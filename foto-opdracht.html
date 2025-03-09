@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto-Opdracht - CKV</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00; }
+            50% { text-shadow: -2px -2px 0 #ff0000, 2px 2px 0 #00ff00; }
+            100% { text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00; }
+        }
+
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            animation: glitch 0.8s infinite alternate;
+        }
+
+        .theater-text {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            width: 40%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">CKV</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="opdrachten.html">Opdrachten</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="evenementen.html">Evenementen</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery">
+        <div class="category">
+            <h2 class="glitch">KUNST</h2>
+            <div class="images">
+                <div class="image-box">
+                    <img src="6.jpg" alt="Schilderij van een vrouw">
+                    <p>Dit beeld is gemaakt van klei, maar wat het bijzonder maakt, is dat er allemaal objecten in verwerkt zijn. Het laat zien dat kunst niet alleen schilderijen of tekeningen zijn, maar ook uit verschillende materialen kan bestaan. Het doet je een beetje nadenken over wat kunst eigenlijk betekent. Wat waarschijnlijk betekend dat er veel in je hoofd om kan gaan en dat het soms te veel wordt.</p>
+                </div>
+                <div class="image-box">
+                    <img src="2.jpg" alt="Muurkunst met vogel en bloem">
+                    <p>Dit is een muur die helemaal bedekt is met planten. Op het eerste gezicht lijkt het gewoon natuur, maar de manier waarop de planten zijn neergezet, maakt het een soort kunstwerk. Je ziet dit steeds vaker in steden, omdat het er vet uitziet en ook nog eens goed is voor het milieu. nou is dit in een school en zijn het volgens mij nepplanten maar het idee is er om mensen aan het denken te zetten over het milieu.</p>
+                </div>
+                <div class="image-box">
+                    <img src="1.jpg" alt="Gipsbeeld met objecten">
+                    <p>Hier zie je een raam met verschillende kunstwerken en tekeningen. Het laat zien dat mensen kunst in hun dagelijks leven verwerken. Het is niet alleen iets voor musea maar ook gewoon voor thuis om bijvoorbeeld je persoonlijkheid te laten zien.</p>
+                </div>
+                <div class="image-box">
+                    <img src="4.jpg" alt="Houtsnede van een gebouw">
+                    <p>Dit schilderij laat een vrouw zien en is best gek geschilderd. De kleuren maken het super mooi waardoor het lijkt alsof er veel gevoel in zit. Het is niet zomaar een tekening maar echt een kunstwerk dat emoties overbrengt als je er naar kijkt.</p>
+                </div>
+                <div class="image-box">
+                    <img src="5.jpg" alt="Fotografie van een groene muur">
+                    <p>Dit is een stuk street art met een vogel en bloemen. Het is kleurrijk en springt echt in het oog. Je ziet dit soort kunst vaak op muren in de stad maar deze is in de school en het maakt de omgeving meteen levendiger. Soms zit er een diepere betekenis achter maar het kan ook gewoon tof zijn om naar te kijken.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2 class="glitch">CULTUUR</h2>
+            <div class="images">
+                <div class="image-box">
+                    <img src="3.jpg" alt="Raam met kunstwerken en illustraties">
+                    <p>Deze hout vorm van de oldehove die bij ons in school hangt laat echt zien hoe erg de oldehove deel is van de leeuwardens cultuur het is ik denk het bekenste gebouw uit leeuwarden en mensen geven er dus echt om.</p>
+                </div>
+                <div class="image-box">
+                    <img src="7.jpg" alt="Oude industriële brug met tekst 'SICHT'">
+                    <p>Kaas hoort bij cultuur omdat het in veel landen een belangrijk eten is, vooral in Nederland. Hier staan we bekend om onze kazen zoals Gouda en Edam. Kaas maken is een traditie die al eeuwen bestaat en wordt nog steeds op de oude manier gedaan op sommige boerderijen. Ook zijn er speciale kaasmarkten, zoals die in Alkmaar, waar mensen laten zien hoe kaas vroeger werd verhandeld. Dit soort tradities maken kaas niet alleen eten, maar ook een deel van onze geschiedenis en identiteit.</p>
+                </div>
+                <div class="image-box">
+                    <img src="8.jpg" alt="Woningen met historische bouwstijl">
+                    <p>Vlaggen worden vaak gebruikt om iets te laten zien zoals nationaliteit trots of een bepaalde boodschap. In dit geval hangt de vlag aan een gebouw en is het de leeuwarden zijn vlag wat laat zien dat degene die dit ophangt trots is op zijn stad/cultuur.</p>
+                </div>
+                <div class="image-box">
+                    <img src="9.jpg" alt="Vlag buiten een gebouw">
+                    <p>Dit beeld hoort bij cultuur omdat kunst een manier is waarop mensen dingen laten zien of uitdrukken. Dit soort grote beelden in de stad noemen we straatkunst. Het maakt de omgeving leuker en kan een betekenis hebben. De twee gezichten die naar elkaar kijken kunnen iets te maken hebben met contact of samenhorigheid. Ook laat het zien dat kunst gewoon op straat te vinden is en niet alleen in een museum. (https://www.tzum.info/2018/05/column-coen-peppelenbos-cultuur-kan-dat-ook-in-de-frituur/) </p>
+                </div>
+                <div class="image-box">
+                    <img src="10.jpg" alt="Agent in gesprek met burger">
+                    <p>Hier zie je een politieagent die met een burger praat. Dit is een typisch straatbeeld en laat zien hoe mensen met elkaar omgaan in een samenleving. Misschien vraagt de agent om informatie, of misschien is het gewoon een normaal gesprek. Hoe dan ook het is een herkenbaar moment dat je overal ter wereld ziet. Maar vooral voor de nederlandse cultuur die natuurlijks deels ook draait om veiligheid.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

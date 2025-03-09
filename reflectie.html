@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflectie</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 10px 20px;
+        }
+        .logo {
+            color: #FFC107;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+        h1.glitch {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ff0;
+            text-shadow: 3px 3px 0 red, -3px -3px 0 cyan;
+            animation: glitch 0.8s infinite alternate;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 3px 3px 0 red, -3px -3px 0 cyan; }
+            100% { text-shadow: -3px -3px 0 red, 3px 3px 0 cyan; }
+        }
+        main {
+            max-width: 800px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">CKV</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="opdrachten.html">Opdrachten</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="evenementen.html">Evenementen</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="glitch">REFLECTIE</h1>
+        <p>
+            Opzich gingen de opdrachten wel goed en was dit de eerste keer dat ik een website helemaal zelf heb gemaakt dus door alleen alles te coderen zonder templates en alles zelf te doen, maar hetr was een leuke uitdaging het design is mischien wat simpeler dan ik had gewild en daardoor mischien wat saai maar ik vindt dat het mooi is gelukt. Ik vondt de 10 foto opdracht moeilijk want had niet de beste 10 foto's gemaakt maar volgens mij heb ik de uitleg best oke gedaan. Ik vondt het een leuke uitdaging en heb opzich wel zin in om nog meer bezig te gaan met deze website.
+        </p>
+        <p>
+        </p>
+    </main>
+<a href="index.html" class="back-button">Back to Home</a>
+</body>
+</html>
