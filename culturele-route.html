@@ -3,54 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Culturele-route - CKV</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Culturele Route</title>
     <style>
-        @keyframes glitch {
-            0% { text-shadow: 3px 3px 0 #ff0000, -3px -3px 0 #00ff00; }
-            50% { text-shadow: -3px -3px 0 #ff0000, 3px 3px 0 #00ff00; }
-            100% { text-shadow: 3px 3px 0 #ff0000, -3px -3px 0 #00ff00; }
-        }
-
         body {
-            background-color: #111;
-            color: white;
-            font-family: Arial, sans-serif;
             text-align: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            font-family: Arial, sans-serif;
         }
-
-        h1 {
-            font-size: 3rem;
-            animation: glitch 0.8s infinite alternate;
-        }
-
-        .back-button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #000;
-            background-color: #ffcc00;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
+        .map-container {
+            position: relative;
             display: inline-block;
         }
-
-        .back-button:hover {
-            background-color: #ffaa00;
+        .map {
+            width: 600px;
+        }
+        .character {
+            position: absolute;
+            width: 50px;
+            transition: 0.3s;
+        }
+        .location-info {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Deze opdracht wordt in de volgende periode gemaakt.</h1>
-    <a href="index.html" class="back-button">Back to Home</a>
+    <h1>Culturele Route</h1>
+    <div class="map-container">
+        <img src="kaart.png" alt="Kaart" class="map">
+        <img src="popetje.png" alt="Poppetje" class="character" id="character" style="top: 300px; left: 250px;">
+    </div>
+    <div class="location-info" id="location-info">
+        <p>Gebruik de pijltjestoetsen om te bewegen.</p>
+    </div>
+    
+    <script>
+        let locations = [
+            {x: 250, y: 300, text: "Startpunt - Hier begint je route!"},
+            {x: 200, y: 250, text: "Locatie 1 - Een historisch gebouw."},
+            {x: 350, y: 200, text: "Locatie 2 - Een bekend kunstwerk."},
+            {x: 400, y: 350, text: "Locatie 3 - Een cultureel monument."}
+        ];
+        
+        let character = document.getElementById("character");
+        let infoBox = document.getElementById("location-info");
+        let position = { x: 250, y: 300 };
+
+        function updatePosition() {
+            character.style.left = position.x + "px";
+            character.style.top = position.y + "px";
+            
+            let location = locations.find(loc => loc.x === position.x && loc.y === position.y);
+            if (location) {
+                infoBox.innerHTML = `<p>${location.text}</p>`;
+            }
+        }
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowUp") position.y -= 20;
+            if (event.key === "ArrowDown") position.y += 20;
+            if (event.key === "ArrowLeft") position.x -= 20;
+            if (event.key === "ArrowRight") position.x += 20;
+            
+            updatePosition();
+        });
+    </script>
 </body>
 </html>
