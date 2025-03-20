@@ -1047,3 +1047,51 @@ nav ul li a {
     transform: translate(3px, 3px);
     animation: glitch 0.5s infinite;
 }
+
+
+.glitch {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    color: #00ff00;
+    text-align: center;
+    animation: glitch-skew 0.5s infinite linear alternate-reverse;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: #ff0000;
+    background: transparent;
+    clip-path: inset(0 0 0 0);
+}
+
+.glitch::before {
+    transform: translate(-2px, -2px);
+    animation: glitch-anim 0.3s infinite linear alternate-reverse;
+    color: #ff00ff;
+}
+
+.glitch::after {
+    transform: translate(2px, 2px);
+    animation: glitch-anim 0.3s infinite linear alternate;
+    color: #00ffff;
+}
+
+@keyframes glitch-anim {
+    0% { clip-path: inset(0 0 20% 0); }
+    25% { clip-path: inset(10% 0 10% 0); }
+    50% { clip-path: inset(30% 0 5% 0); }
+    75% { clip-path: inset(5% 0 30% 0); }
+    100% { clip-path: inset(20% 0 0 0); }
+}
+
+@keyframes glitch-skew {
+    0% { transform: skew(2deg); }
+    100% { transform: skew(-2deg); }
+}
