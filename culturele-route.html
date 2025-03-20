@@ -3,54 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Culturele-route - CKV</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        @keyframes glitch {
-            0% { text-shadow: 3px 3px 0 #ff0000, -3px -3px 0 #00ff00; }
-            50% { text-shadow: -3px -3px 0 #ff0000, 3px 3px 0 #00ff00; }
-            100% { text-shadow: 3px 3px 0 #ff0000, -3px -3px 0 #00ff00; }
-        }
-
-        body {
-            background-color: #111;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 3rem;
-            animation: glitch 0.8s infinite alternate;
-        }
-
-        .back-button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #000;
-            background-color: #ffcc00;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .back-button:hover {
-            background-color: #ffaa00;
-        }
-    </style>
+    <title>Culturele Route</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Deze opdracht wordt in de volgende periode gemaakt.</h1>
-    <a href="index.html" class="back-button">Back to Home</a>
+
+    <!-- Navigatiebalk -->
+    <nav>
+        <div class="logo">CKV</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Opdrachten</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Evenementen</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Glitchy Titel -->
+    <h1 class="glitch" data-text="CULTURELE ROUTE">CULTURELE ROUTE</h1>
+
+    <!-- Interactieve Kaart -->
+    <div class="map-container">
+        <img src="image.png" alt="Kaart" class="map">
+        <img src="popetje.png" alt="Poppetje" class="character" id="character">
+    </div>
+
+    <!-- Tekstblok -->
+    <div class="info">
+        <h2 id="location-title">Sliekerfilm</h2>
+        <p id="location-text">Waar is het filmhuis in Leeuwarden precies naar vernoemd? Wie of wat is Slieker?</p>
+        <img src="image1.jpg" alt="Locatie Afbeelding" id="location-image">
+    </div>
+
+    <!-- Navigatieknoppen -->
+    <div class="controls">
+        <button onclick="prevLocation()">⬅ Vorige</button>
+        <button onclick="nextLocation()">Volgende ➡</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
