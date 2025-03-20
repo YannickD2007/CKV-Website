@@ -4,44 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Culturele Route</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background: #222;
+            padding: 10px;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: yellow;
+            text-decoration: none;
+        }
+        .glitch {
+            font-size: 2em;
+            font-weight: bold;
+            color: yellow;
+            text-shadow: 2px 2px red, -2px -2px blue;
+        }
+        .map-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .map {
+            width: 80%;
+            max-width: 600px;
+        }
+        .popetje {
+            position: absolute;
+            width: 40px;
+            transition: top 0.5s, left 0.5s;
+        }
+        .info-box {
+            margin-top: 20px;
+            padding: 10px;
+            background: #333;
+            display: inline-block;
+            border-radius: 10px;
+        }
+        .controls {
+            margin-top: 20px;
+        }
+        .controls button {
+            background: yellow;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-
-    <!-- Navigatiebalk -->
     <nav>
-        <div class="logo">CKV</div>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Opdrachten</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Evenementen</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Culturele Route</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-
-    <!-- Glitchy Titel -->
-    <h1 class="glitch" data-text="CULTURELE ROUTE">CULTURELE ROUTE</h1>
-
-    <!-- Interactieve Kaart -->
+    <h1 class="glitch">Culturele Route</h1>
     <div class="map-container">
-        <img src="kaart.png" alt="Kaart" class="map">
-        <img src="popetje.png" alt="Poppetje" class="character" id="character">
+        <img src="kaart.png" alt="Kaart van Leeuwarden" class="map">
+        <img src="popetje.png" id="popetje" class="popetje" style="top: 50px; left: 50px;">
     </div>
-
-    <!-- Tekstblok -->
-    <div class="info">
+    <div class="info-box" id="info-box">
         <h2 id="location-title">Sliekerfilm</h2>
         <p id="location-text">Waar is het filmhuis in Leeuwarden precies naar vernoemd? Wie of wat is Slieker?</p>
-        <img src="image1.jpg" alt="Locatie Afbeelding" id="location-image">
+        <img src="slieker.jpg" id="location-img" alt="Sliekerfilm">
     </div>
-
-    <!-- Navigatieknoppen -->
     <div class="controls">
-        <button onclick="prevLocation()">⬅ Vorige</button>
-        <button onclick="nextLocation()">Volgende ➡</button>
+        <button onclick="moveCharacter(-1)">&#8592; Vorige</button>
+        <button onclick="moveCharacter(1)">Volgende &#8594;</button>
     </div>
-
-    <script src="script.js"></script>
+    <script>
+        let locations = [
+            {title: "Sliekerfilm", text: "Waar is het filmhuis in Leeuwarden precies naar vernoemd? Wie of wat is Slieker?", img: "slieker.jpg", top: 50, left: 50},
+            {title: "Stadsschouwburg de Harmonie", text: "Achterhaal wanneer de Harmonie is gebouwd en wie de architect was.", img: "harmonie.jpg", top: 100, left: 100},
+            {title: "Pier Pander Tempel", text: "Pier Pander heeft een prijs gewonnen waarmee hij mocht gaan reizen. Wat was dat?", img: "pander.jpg", top: 150, left: 120},
+            {title: "Klaas Lageweg", text: "Wat is een overkoepelende term voor graffiti en andere straatkunst in de openbare ruimte?", img: "lageweg.jpg", top: 200, left: 140},
+            {title: "M.C. Escher", text: "Omschrijf duidelijk wat Escher heeft gemaakt en waar hij zo bekend om staat.", img: "escher.jpg", top: 250, left: 160},
+            {title: "Simon Vestdijk", text: "Zoek het werk op van Vestdijk en noteer een zin uit zijn werk die jou aanspreekt.", img: "vestdijk.jpg", top: 300, left: 180},
+            {title: "Mata Hari", text: "Past Mata Hari bij CKV? Leg uit waarom je het wel of niet vindt.", img: "matahari.jpg", top: 350, left: 200},
+            {title: "Slauerhoff", text: "Van welke designers verkochten ze meubels?", img: "slauerhoff.jpg", top: 400, left: 220},
+            {title: "Pierre Cuypers", text: "Pierre Cuypers heeft wat klusjes gedaan in Amsterdam. Zoek de twee belangrijkste uit.", img: "cuypers.jpg", top: 450, left: 240},
+            {title: "Tryater", text: "Zoek uit wat het laatste theaterstuk is dat Tryater heeft gespeeld. Waar gaat het over?", img: "tryater.jpg", top: 500, left: 260}
+        ];
+        let currentIndex = 0;
+        function moveCharacter(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = 0;
+            if (currentIndex >= locations.length) currentIndex = locations.length - 1;
+            document.getElementById("popetje").style.top = locations[currentIndex].top + "px";
+            document.getElementById("popetje").style.left = locations[currentIndex].left + "px";
+            document.getElementById("location-title").innerText = locations[currentIndex].title;
+            document.getElementById("location-text").innerText = locations[currentIndex].text;
+            document.getElementById("location-img").src = locations[currentIndex].img;
+        }
+    </script>
 </body>
 </html>
