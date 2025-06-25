@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culturele-Route - CKV</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00; }
+            50% { text-shadow: -2px -2px 0 #ff0000, 2px 2px 0 #00ff00; }
+            100% { text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00; }
+        }
+
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            animation: glitch 0.8s infinite alternate;
+        }
+
+        .theater-text {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            width: 40%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">CKV</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="opdrachten.html">Opdrachten</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="evenementen.html">Evenementen</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery">
+        <div class="category">
+            <h2 class="glitch">Culturele</h2>
+            <p class="theater-text">Route door de stad</p>
+            <div class="images">
+                <div class="image-box">
+                    <img src="Harmoni.jpg" alt="Schilderij van een vrouw">
+                    <p>De harmonie is het huis van theater in leeuwarden. 2 tentoonstellingen op dit moment zijn Fashionshow Harmonia en Grey Delise & the blue ribbon Boysen dit hoort bij de kunstdisipline: Theater.</p>
+                </div>
+                <div class="image-box">
+                    <img src="slieker-film.jpg" alt="Muurkunst met vogel en bloem">
+                    <p>Slieker is een bioscoop in het museum. 3 Films die op dit moment gespeeld worden z: Mond, The Salt Path en Loveable. Slieker hoort bij de kunstdisipline: Film </p>
+                </div>
+                <div class="image-box">
+                    <img src="Pier.jpg" alt="Gipsbeeld met objecten">
+                    <p>Aan de binnekant van de tempel zie je Moderne kunst 5 beelden van hem het is eigenlijk zijn levenswerk. Kunsdiscipline: Beeldend.</p>
+                </div>
+                <div class="image-box">
+                    <img src="unnamed.jpg" alt="Houtsnede van een gebouw">
+                    <p>Ze was getrouwd aan Rembrandt van Rijn. Kunstdiscipline is 'Schilderij'.</p>
+                </div>
+                <div class="image-box">
+                    <img src="Princessehof.jpg" alt="Fotografie van een groene muur">
+                    <p>Escher heeft hier vroeger gewoond. Kunstdiscipline is 'Schilderij'</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2 class="glitch">Route</h2>
+            <p class="theater-text">Ik was zelf ziek dus heb geen eigen foto's.</p>
+            <div class="images">
+                <div class="image-box">
+                    <img src="Muziekkoepel.jpg" alt="Raam met kunstwerken en illustraties">
+                    <p>In ijn Roman Verloren paradijs was deze plek het hoogtepunt. Kunstdiscipline is Architectuur.</p>
+                </div>
+                <div class="image-box">
+                    <img src="Mata.jpg" alt="Oude industriële brug met tekst 'SICHT'">
+                    <p>Ze is dansend afgebeeld op het beeld als exotishe dansen, ze is beroemd geworden door haar dans. Kunstdiscipline is Dans.</p>
+                </div>
+                <div class="image-box">
+                    <img src="Slauerhoff.jpg" alt="Woningen met historische bouwstijl">
+                    <p>Slauerhoff was een bekende dichter en past daarom bij het kunstdiscipline Literatuur. Kunstdiscipline gebouw is Architectuur</p>
+                </div>
+                <div class="image-box">
+                    <img src="Bonifatiuskerk.jpg" alt="Vlag buiten een gebouw">
+                    <p>Bij welke architectonische stroom hoort deze kerk? Neogotiek Pieree Cuypers heeft wat klusjes gedaan in Amsterdam, wat zijn de belangrijkste? Vondelkerk en Cuypershof. Kunstdisscipline is Architectuur.</p>
+                </div>
+                <div class="image-box">
+                    <img src="Tryater.jpg" alt="Agent in gesprek met burger">
+                    <p>het is een veelzijdigtheatergezelschap en een van de oudste in Nederland. Kunstdiscipline is Theater.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
